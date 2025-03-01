@@ -3,5 +3,5 @@
 
 
 ```
-curl -fsSL "https://raw.githubusercontent.com/ljun223/qlsh/main/qionglong.sh" -o qinglong.sh && bash qinglong.sh
+curl -fsSL "https://raw.githubusercontent.com/ljun223/qlsh/refs/heads/main/qinglong.sh" -o qinglong.sh && bash qinglong.sh
 ```
