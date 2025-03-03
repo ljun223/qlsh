@@ -5,13 +5,22 @@ install_ql() {
     echo "检测到系统类型：$1"
     echo "正在安装青龙面板..."
 
+    # 如果未提供 QL_BRANCH，则根据系统类型设置默认值
+    if [ -z "$QL_BRANCH" ]; then
+        case "$1" in
+            "Alpine Linux") QL_BRANCH="master" ;;
+            "Debian"|"Ubuntu (Debian-based)"|"Debian/Ubuntu") QL_BRANCH="debian" ;;
+            *) QL_BRANCH="master" ;;  # 其他系统默认使用 master
+        esac
+    fi
+
     case "$1" in
         "Alpine Linux")
             # Alpine 安装流程
             set -x
             cat <<EOF >> /etc/profile.d/ql_env.sh
 export QL_DIR=/ql
-export QL_BRANCH=master
+export QL_BRANCH=$QL_BRANCH
 export LANG=zh_CN.UTF-8
 export TERMUX_APK_RELEASE=F-DROID
 export SHELL=/bin/bash
@@ -50,7 +59,7 @@ EOF
             set -x
             cat <<EOF >> /etc/profile.d/ql_env.sh
 export QL_DIR=/ql
-export QL_BRANCH=debian
+export QL_BRANCH=$QL_BRANCH
 export LANG=zh_CN.UTF-8
 export TERMUX_APK_RELEASE=F-DROID
 export SHELL=/bin/bash
@@ -82,6 +91,7 @@ EOF
 
     # 验证安装
     echo "青龙面板安装完成！"
+    ql -l check
     qinglong
 }
 
@@ -105,6 +115,14 @@ detect_os() {
         fi
     fi
 }
+
+# 解析命令行参数
+while getopts "b:" opt; do
+    case $opt in
+        b) QL_BRANCH="$OPTARG" ;;
+        *) echo "用法: $0 [-b 分支名称]" >&2; exit 1 ;;
+    esac
+done
 
 # 执行系统检测并安装
 OS_TYPE=$(detect_os)
