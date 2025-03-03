@@ -1,9 +1,9 @@
 ###青龙面板一键安装脚本
 
 - **安装命令**:
-  - ```bash
+   ```bash
   bash qinglong.sh
-    ```
+   ```
 - **默认安装分支**：
   - Alpine：`master`
   - Debian/Ubuntu：`debian`
