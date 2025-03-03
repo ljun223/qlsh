@@ -28,7 +28,7 @@
 
 2. **指定分支安装**：
 
-### 示例：在Alpine安装v2.15.0版本
+   示例：在Alpine上安装 **v2.15.0** 版本
 
    ```bash
    curl -fsSL "https://raw.githubusercontent.com/ljun223/qlsh/refs/heads/main/qinglong.sh" -o qinglong.sh &&bash qinglong.sh -b v2.15.0
