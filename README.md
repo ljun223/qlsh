@@ -16,13 +16,13 @@
 1. **使用默认分支安装**：
    在 **Alpine Linux** 上：
      ```bash
-     curl -fsSL "https://raw.githubusercontent.com/ljun223/qlsh/refs/heads/main/qinglong.sh" -o qinglong.sh &&bash qinglong.sh
+     curl -fsSL "https://raw.githubusercontent.com/ljun223/qlsh/refs/heads/main/qinglong.sh" -o qinglong.sh && bash qinglong.sh
      ```
      默认安装 `master` 分支。
 
    在 **Debian/Ubuntu** 上：
      ```bash
-     curl -fsSL "https://raw.githubusercontent.com/ljun223/qlsh/refs/heads/main/qinglong.sh" -o qinglong.sh &&bash qinglong.sh
+     curl -fsSL "https://raw.githubusercontent.com/ljun223/qlsh/refs/heads/main/qinglong.sh" -o qinglong.sh && bash qinglong.sh
      ```
      默认安装 `debian` 分支。
 
@@ -31,6 +31,6 @@
    示例：在Alpine上安装 **v2.15.0** 版本
 
    ```bash
-   curl -fsSL "https://raw.githubusercontent.com/ljun223/qlsh/refs/heads/main/qinglong.sh" -o qinglong.sh &&bash qinglong.sh -b v2.15.0
+   curl -fsSL "https://raw.githubusercontent.com/ljun223/qlsh/refs/heads/main/qinglong.sh" -o qinglong.sh && bash qinglong.sh -b v2.15.0
    ```
    这将安装 `v2.15.0` 版本的青龙面板。
