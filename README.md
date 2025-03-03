@@ -34,5 +34,3 @@
    curl -fsSL "https://raw.githubusercontent.com/ljun223/qlsh/refs/heads/main/qinglong.sh" -o qinglong.sh &&bash qinglong.sh -b v2.15.0
    ```
    这将安装 `v2.15.0` 版本的青龙面板。
-
----
