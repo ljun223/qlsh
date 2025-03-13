@@ -40,7 +40,7 @@ EOF
             apk update
             ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
             echo "Asia/Shanghai" > /etc/timezone
-            npm config set registry https://registry.npmmirror.com
+            npm config set registry https://mirrors.cloud.tencent.com/npm/
             npm install -g pnpm
             pnpm add -g pm2 ts-node typescript tslib
             mkdir -p $QL_DIR
@@ -69,7 +69,7 @@ EOF
             . /etc/profile
             apt update
             apt install -y nodejs python3-pip npm nginx coreutils git curl wget cron sqlite3
-            npm config set registry https://registry.npmmirror.com
+            npm config set registry https://mirrors.cloud.tencent.com/npm/
             npm install -g pnpm
             pnpm add -g pm2 ts-node typescript tslib
             mkdir -p $QL_DIR
