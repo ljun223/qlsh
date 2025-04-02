@@ -67,7 +67,7 @@ EOF
             . /etc/profile
             apt update
             apt upgrade
-            apt install -y nodejs python3-pip npm nginx coreutils git curl wget cron perl sqlite3 libsqlite3-dev jq vq
+            apt install -y nodejs python3-pip npm nginx coreutils git curl wget cron perl sqlite3 libsqlite3-dev jq yq
             npm config set registry https://mirrors.cloud.tencent.com/npm/
             npm install -g pnpm
             pnpm add -g pm2 ts-node typescript tslib
