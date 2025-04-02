@@ -65,7 +65,7 @@ export PATH=\$PATH:~/.local/share/pnpm:~/.local/share/pnpm/global/5/node_modules
 EOF
             . /etc/profile
             apt update
-            apt install -y nodejs python3-pip npm nginx coreutils git curl wget cron sqlite3
+            apt install -y nodejs python3-pip npm nginx coreutils git curl wget cron perl sqlite3 libsqlite3-dev jq vq
             npm config set registry https://mirrors.cloud.tencent.com/npm/
             npm install -g pnpm
             pnpm add -g pm2 ts-node typescript tslib
