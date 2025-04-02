@@ -22,7 +22,6 @@ install_ql() {
 export QL_DIR=/ql
 export QL_BRANCH=$QL_BRANCH
 export LANG=zh_CN.UTF-8
-export TERMUX_APK_RELEASE=F-DROID
 export SHELL=/bin/bash
 export PNPM_HOME=~/.local/share/pnpm
 export PATH=\$PATH:~/.local/share/pnpm:~/.local/share/pnpm/global/5/node_modules
@@ -60,8 +59,6 @@ EOF
             cat <<EOF >> /etc/profile.d/ql_env.sh
 export QL_DIR=/ql
 export QL_BRANCH=$QL_BRANCH
-export LANG=zh_CN.UTF-8
-export TERMUX_APK_RELEASE=F-DROID
 export SHELL=/bin/bash
 export PNPM_HOME=~/.local/share/pnpm
 export PATH=\$PATH:~/.local/share/pnpm:~/.local/share/pnpm/global/5/node_modules
